@@ -44,13 +44,12 @@ a:hover {
 
 /* Form Container */
 .form-container {
-  max-width: 450px;
+  max-width: 600px;
   margin: 0 auto;
 }
 
 .form-body {
   background-color: #4a304d;
-  padding: 50px;
   color: #ffffff;
   margin: auto 0;
   border-radius: 3px;
