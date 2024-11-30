@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main Page</title>
     <link href="https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/common.css"> <!-- Common styles -->
-    <style>
-        /* Optional inline styles specific to index.html */
-    </style>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <div id="page-content">
+<body class="font-muli bg-gray-100">
+
+    <div id="page-content" class="min-h-screen">
         <!-- This is where the page content will be loaded dynamically -->
     </div>
 
@@ -25,17 +25,9 @@
                 .then(data => {
                     document.getElementById('page-content').innerHTML = data;
                     if (page === 'login') {
-                        // Load specific CSS for login page
-                        const link = document.createElement('link');
-                        link.rel = 'stylesheet';
-                        link.href = 'assets/css/login.css';
-                        document.head.appendChild(link);
+                        // Load specific CSS for login page if needed
                     } else if (page === 'signup') {
-                        // Load specific CSS for signup page
-                        const link = document.createElement('link');
-                        link.rel = 'stylesheet';
-                        link.href = 'assets/css/signup.css';
-                        document.head.appendChild(link);
+                        // Load specific CSS for signup page if needed
                     }
                 });
         }

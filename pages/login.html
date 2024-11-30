@@ -1,23 +1,39 @@
-<div class="main-container">
-    <div class="form-container">
-        <div class="form-body">
-            <h2 class="title">Log in with</h2>
-
-            <form action="" class="the-form">
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="Enter your email">
-
-                <label for="password">Password</label>
-                <input type="password" name="password" id="password" placeholder="Enter your password">
-
-                <input type="submit" value="Log In">
-            </form>
+<div class="min-h-screen bg-[url('./../assets/images/bg.jpg')] bg-cover bg-center flex items-center justify-center">
+    <div class="w-full max-w-sm p-8 bg-white rounded-lg shadow-lg">
+      <h2 class="text-2xl font-semibold text-center mb-4">Log In</h2>
+  
+      <form action="" class="space-y-4">
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="w-full p-2 border rounded-md"
+            placeholder="Enter your email"
+          />
         </div>
-
-        <div class="form-footer">
-            <div>
-                <span>Don't have an account?</span> <a href="#" onclick="loadPage('signup')">Sign Up</a>
-            </div>
+  
+        <div>
+          <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            class="w-full p-2 border rounded-md"
+            placeholder="Enter your password"
+          />
         </div>
+  
+        <button type="submit" class="w-full py-2 bg-blue-500 text-white rounded-md">
+          Log In
+        </button>
+      </form>
+  
+      <div class="mt-4 text-center">
+        <span>Don't have an account?</span>
+        <a href="#" class="text-blue-500" onclick="loadPage('signup')">Sign Up</a>
+      </div>
     </div>
-</div>
+  </div>
+  
