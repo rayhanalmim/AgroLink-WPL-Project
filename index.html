@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/common.css"> <!-- Common styles -->
+    <style>
+        /* Optional inline styles specific to index.html */
+    </style>
+</head>
+<body>
+    <div id="page-content">
+        <!-- This is where the page content will be loaded dynamically -->
+    </div>
+
+    <script>
+        // Example: Load the login page initially
+        // You can dynamically switch between pages here
+
+        function loadPage(page) {
+            fetch(`pages/${page}.html`)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('page-content').innerHTML = data;
+                    if (page === 'login') {
+                        // Load specific CSS for login page
+                        const link = document.createElement('link');
+                        link.rel = 'stylesheet';
+                        link.href = 'assets/css/login.css';
+                        document.head.appendChild(link);
+                    } else if (page === 'signup') {
+                        // Load specific CSS for signup page
+                        const link = document.createElement('link');
+                        link.rel = 'stylesheet';
+                        link.href = 'assets/css/signup.css';
+                        document.head.appendChild(link);
+                    }
+                });
+        }
+
+        // Initial load
+        loadPage('login');
+    </script>
+</body>
+</html>
