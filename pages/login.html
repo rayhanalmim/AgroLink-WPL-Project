@@ -1,39 +1,52 @@
-<div class="min-h-screen bg-[url('./../assets/images/bg.jpg')] bg-cover bg-center flex items-center justify-center">
-    <div class="w-full max-w-sm p-8 bg-white rounded-lg shadow-lg">
-      <h2 class="text-2xl font-semibold text-center mb-4">Log In</h2>
-  
-      <form action="" class="space-y-4">
-        <div>
-          <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            class="w-full p-2 border rounded-md"
-            placeholder="Enter your email"
-          />
-        </div>
-  
-        <div>
-          <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
-          <input
-            type="password"
-            name="password"
-            id="password"
-            class="w-full p-2 border rounded-md"
-            placeholder="Enter your password"
-          />
-        </div>
-  
-        <button type="submit" class="w-full py-2 bg-blue-500 text-white rounded-md">
-          Log In
-        </button>
-      </form>
-  
-      <div class="mt-4 text-center">
-        <span>Don't have an account?</span>
-        <a href="#" class="text-blue-500" onclick="loadPage('signup')">Sign Up</a>
+<div class="min-h-screen bg-[url('./../assets/images/bg.jpg')] bg-cover bg-center flex items-center justify-center relative">
+  <!-- Dark Overlay -->
+  <div class="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
+
+  <!-- Form Section -->
+  <div class="w-full max-w-sm p-8 bg-white rounded-lg shadow-lg z-10 relative">
+    <h2 class="text-2xl font-semibold text-center mb-4">Log In</h2>
+
+    <form action="" class="space-y-4">
+      <div>
+        <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          class="w-full p-2 border rounded-md bg-white bg-opacity-60 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          placeholder="Enter your email"
+        />
       </div>
+
+      <div>
+        <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          class="w-full p-2 border rounded-md bg-white bg-opacity-60 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          placeholder="Enter your password"
+        />
+      </div>
+
+      <button type="submit" class="w-full py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">
+        Log In
+      </button>
+    </form>
+
+    <div class="mt-4 text-center">
+      <span>Don't have an account?</span>
+      <a href="#" class="text-blue-500" onclick="loadPage('signup')">Sign Up</a>
     </div>
   </div>
-  
+
+  <!-- Floating Button to Go Back to Main Page -->
+  <button
+    onclick="loadPage('main')"
+    class="absolute bottom-8 left-8 p-4 bg-blue-500 text-white rounded-full shadow-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+    </svg>
+  </button>
+</div>

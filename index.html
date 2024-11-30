@@ -11,29 +11,42 @@
 </head>
 <body class="font-muli bg-gray-100">
 
+    <!-- Navbar -->
+    <nav id="navbar" class="bg-blue-600 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-white text-2xl font-bold">MyWebsite</a>
+            <div class="space-x-4">
+                <button onclick="loadPage('login')" class="text-white px-4 py-2 rounded-md hover:bg-blue-700">Sign In</button>
+                <button onclick="loadPage('signup')" class="text-white px-4 py-2 rounded-md hover:bg-blue-700">Sign Up</button>
+                <!-- Add more menu items here if needed -->
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
     <div id="page-content" class="min-h-screen">
         <!-- This is where the page content will be loaded dynamically -->
     </div>
 
     <script>
-        // Example: Load the login page initially
-        // You can dynamically switch between pages here
-
+        // Load the page dynamically and show/hide navbar accordingly
         function loadPage(page) {
+            // Hide the navbar if the page is auth-related (login/signup)
+            if (page === 'login' || page === 'signup') {
+                document.getElementById('navbar').style.display = 'none';
+            } else {
+                document.getElementById('navbar').style.display = 'block';
+            }
+
             fetch(`pages/${page}.html`)
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById('page-content').innerHTML = data;
-                    if (page === 'login') {
-                        // Load specific CSS for login page if needed
-                    } else if (page === 'signup') {
-                        // Load specific CSS for signup page if needed
-                    }
                 });
         }
 
-        // Initial load
-        loadPage('login');
+        // Initial load to show main page content
+        loadPage('main');
     </script>
 </body>
 </html>
