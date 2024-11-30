@@ -17,6 +17,7 @@ body {
   background-position: center;
   background-attachment: fixed;
   padding: 20px;
+  margin-top: 200px;
   overflow-x: hidden;
 }
 
@@ -52,6 +53,7 @@ a:hover {
   background-color: #4a304d;
   padding: 50px;
   color: #ffffff;
+  margin-top: 100px;
   margin: auto 0;
   border-radius: 3px;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
